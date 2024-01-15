@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\Car.cs" />
+    <Compile Include="AbstractFactory\AbstractFactoryClient.cs" />
     <Compile Include="FactoryMethod\Document.cs" />
     <Compile Include="FactoryMethod\Page.cs" />
     <Compile Include="Program.cs" />

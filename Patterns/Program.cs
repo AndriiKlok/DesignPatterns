@@ -1,4 +1,5 @@
-﻿using Patterns.FactoryMethod;
+﻿using Patterns.AbstractFactory;
+using Patterns.FactoryMethod;
 using System;
 using System.Collections.Generic;
 
@@ -16,6 +17,9 @@ namespace Patterns
 			documents.Add(new Resume());
 			documents.Add(new Report());
 
+			//AbstractFactory
+			new AbstractFactoryClient(new SedanFacory());
+			new AbstractFactoryClient(new SUVFactory());
 
 			Console.ReadLine();
 		}
