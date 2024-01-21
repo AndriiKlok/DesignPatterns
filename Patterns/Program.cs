@@ -1,4 +1,6 @@
 ﻿using Patterns.AbstractFactory;
+using Patterns.Bridge;
+using Patterns.Bridge.Abstract;
 using Patterns.FactoryMethod;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,13 @@ namespace Patterns
 			//AbstractFactory
 			new AbstractFactoryClient(new SedanFacory());
 			new AbstractFactoryClient(new SUVFactory());
+
+			//Bridge
+			AbstractMessage longMessage = new LongMessage(new EmailMessageSender());
+			longMessage.SendMessage("long message!");
+
+			AbstractMessage shortMessae = new ShortMessage(new SmsMessageSender());
+			shortMessae.SendMessage("short sms!");
 
 			Console.ReadLine();
 		}

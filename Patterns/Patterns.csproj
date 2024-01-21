@@ -43,8 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bridge\Abstract\AbstractMessage.cs" />
     <Compile Include="AbstractFactory\Car.cs" />
     <Compile Include="AbstractFactory\AbstractFactoryClient.cs" />
+    <Compile Include="Bridge\Abstract\LongMessage.cs" />
+    <Compile Include="Bridge\Abstract\ShortMessage.cs" />
+    <Compile Include="Bridge\EmailMessageSender.cs" />
+    <Compile Include="Bridge\Interface\IMessageSender.cs" />
+    <Compile Include="Bridge\SmsMessageSender.cs" />
     <Compile Include="FactoryMethod\Document.cs" />
     <Compile Include="FactoryMethod\Page.cs" />
     <Compile Include="Program.cs" />
