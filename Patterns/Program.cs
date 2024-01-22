@@ -2,6 +2,7 @@
 using Patterns.Bridge;
 using Patterns.Bridge.Abstract;
 using Patterns.FactoryMethod;
+using Patterns.Mediator;
 using System;
 using System.Collections.Generic;
 
@@ -29,6 +30,20 @@ namespace Patterns
 
 			AbstractMessage shortMessae = new ShortMessage(new SmsMessageSender());
 			shortMessae.SendMessage("short sms!");
+
+			//Mediator
+			var mediator = new ConcreteMediator();
+			var c1 = new Colleague1();
+			var c2 = new Colleague2();
+
+			mediator.Register(c1);
+			mediator.Register(c2);
+
+			c1.Send("hello");
+			c2.Send("hi");
+
+			c1.Send("bye");
+			c2.Send("bye bye");
 
 			Console.ReadLine();
 		}

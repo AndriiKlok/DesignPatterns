@@ -53,6 +53,7 @@
     <Compile Include="Bridge\SmsMessageSender.cs" />
     <Compile Include="FactoryMethod\Document.cs" />
     <Compile Include="FactoryMethod\Page.cs" />
+    <Compile Include="Mediator\Mediator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\Singleton.cs" />
