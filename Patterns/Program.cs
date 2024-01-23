@@ -1,6 +1,7 @@
 ﻿using Patterns.AbstractFactory;
 using Patterns.Bridge;
 using Patterns.Bridge.Abstract;
+using Patterns.Decorator;
 using Patterns.FactoryMethod;
 using Patterns.Mediator;
 using System;
@@ -44,6 +45,20 @@ namespace Patterns
 
 			c1.Send("bye");
 			c2.Send("bye bye");
+
+			//Decorator
+			Margherita pizza = new Margherita();
+			Console.WriteLine("Margherita: " + pizza.GetPrice().ToString());
+
+			ExtraCheeseTopping moreCheese = new ExtraCheeseTopping(pizza);
+			Console.WriteLine("Margherita with extra cheese: " + moreCheese.GetPrice().ToString());
+
+			MushroomTopping moreMushroom = new MushroomTopping(moreCheese);
+			Console.WriteLine("Margherita with extra cheese + mushrooms: " + moreMushroom.GetPrice().ToString());
+
+			JalapenoTopping moreJalapeno = new JalapenoTopping(moreMushroom);
+			Console.WriteLine("Margherita with extra cheese + mushrooms + jalapeno: " + moreJalapeno.GetPrice().ToString());
+
 
 			Console.ReadLine();
 		}
