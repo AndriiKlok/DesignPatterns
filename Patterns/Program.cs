@@ -1,6 +1,7 @@
 ﻿using Patterns.AbstractFactory;
 using Patterns.Bridge;
 using Patterns.Bridge.Abstract;
+using Patterns.Composite;
 using Patterns.Decorator;
 using Patterns.FactoryMethod;
 using Patterns.Mediator;
@@ -20,6 +21,7 @@ namespace Patterns
 			List<Document> documents = new List<Document>();
 			documents.Add(new Resume());
 			documents.Add(new Report());
+			showFactory(documents);
 
 			//AbstractFactory
 			new AbstractFactoryClient(new SedanFacory());
@@ -59,11 +61,18 @@ namespace Patterns
 			JalapenoTopping moreJalapeno = new JalapenoTopping(moreMushroom);
 			Console.WriteLine("Margherita with extra cheese + mushrooms + jalapeno: " + moreJalapeno.GetPrice().ToString());
 
+			//Composite
+			Pack pack = new Pack();
+			pack.Add(new Chips());
+			pack.Add(new Nachos());
+			pack.Add(new Juice());
+
+			Console.Write($"Total: {pack.GetPrice()}");
 
 			Console.ReadLine();
 		}
 
-		void showFactory(List<Document> documents)
+		static void showFactory(List<Document> documents)
 		{
 			foreach (var document in documents)
 			{
