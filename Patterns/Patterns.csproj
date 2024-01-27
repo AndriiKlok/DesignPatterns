@@ -51,6 +51,7 @@
     <Compile Include="Bridge\EmailMessageSender.cs" />
     <Compile Include="Bridge\Interface\IMessageSender.cs" />
     <Compile Include="Bridge\SmsMessageSender.cs" />
+    <Compile Include="Builder\Builder.cs" />
     <Compile Include="Composite\Store.cs" />
     <Compile Include="Decorator\Pizza.cs" />
     <Compile Include="FactoryMethod\Document.cs" />

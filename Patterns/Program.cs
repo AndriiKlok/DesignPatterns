@@ -1,6 +1,7 @@
 ﻿using Patterns.AbstractFactory;
 using Patterns.Bridge;
 using Patterns.Bridge.Abstract;
+using Patterns.Builder;
 using Patterns.Composite;
 using Patterns.Decorator;
 using Patterns.FactoryMethod;
@@ -97,6 +98,16 @@ namespace Patterns
 			p1.AdditionalInfo.FavoriteNumber = 2;
 
 			showPrototype(new List<Person> { p1, p2, p3 }, "after changes");
+
+			//Builder
+			Console.WriteLine($"\n<==Builder==>");
+			var builder = new ConcreteBuilder();
+			builder.BuildPartA();
+			builder.BuildPartB();
+			builder.BuildPartC();
+
+			var product = builder.GetProduct();
+			product.ListParts();
 
 			Console.ReadLine();
 		}
