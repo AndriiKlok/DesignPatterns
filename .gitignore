@@ -2,3 +2,4 @@
 bin/
 obj/
 MongoExample/appsettings.Development.json
+/notes.txt
